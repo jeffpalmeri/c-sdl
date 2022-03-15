@@ -1,0 +1,5 @@
+clang main.c -o f2 -L./SDL2/build/.libs -I./SDL2/include -lSDL2
+
+clang -Wl,-rpath,'$ORIGIN/SDL2/build/.libs' main.c -o main -L./SDL2/build/.libs -lSDL2
+
+clang main.c -o main -Wl,-rpath,'./SDL2/build/.libs' -L./SDL2/build/.libs -lSDL2
